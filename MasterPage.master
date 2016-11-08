@@ -1,0 +1,135 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Chair. - Store HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/color-red.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+
+    <!--[if lt IE 9]>
+		  <script type="text/javascript" src="js/html5shiv.min.js"></script>
+		  <script type="text/javascript" src="js/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+<body>
+    <form runat="server">
+        <div class="nav-container">
+            <nav class="navbar navbar-default">
+                <div class="container" id="navDiv">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navigation" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="Default.aspx">Chair<span class="logo-dot accent-bg"></span></a>
+                        <a href="#sidr" class="side-menu-opener mobile">
+                            <div class="bars">
+                                <span class="bar top"></span>
+                                <span class="bar middle"></span>
+                                <span class="bar bottom"></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="collapse-navigation">
+                        
+            <div class="row">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="Default.aspx">Home</a></li>
+                            <li class="dropdown">
+                                <a href="ProductList.aspx" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Shop<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" datasource="sqlDSCategory">
+                                    <asp:SqlDataSource ID="sqlDSCategory"
+                                        ConnectionString="<%$ ConnectionStrings:StoreDatabaseConnectionString %>"
+                                        SelectCommand="SELECT * FROM [Category] WHERE parent = 0"
+                                        runat="server"></asp:SqlDataSource>
+                                    <asp:DataList ID="DataList1" runat="server" DataSourceID="sqlDSCategory">
+                                        <ItemTemplate>
+                                            <li><a href="SubCategory.aspx?CategoryID=<%#Container.DataItem("Id")%>&CategoryName=<%#Container.DataItem("CategoryName")%>"><%#Container.DataItem("CategoryName")%></a></li>
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                </ul>
+                            </li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#"><i class="fa fa-paper-plane"></i>Contact</a></li>
+                            <li><a href="ViewCart.aspx" class="menu-cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><asp:TextBox ID="tbSearch" runat="server" /></li>
+                            <li><asp:Button ID="btnSearch" runat="server" Text="search" /></li>
+                        </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </nav>
+        </div>
+        <header style="height: 130px">
+            <div class="background-image-holder parallax-background overlay" data-stellar-background-ratio="0.5">
+                <img class="background-image" alt="Background Image" src="images/1600x900.png">
+            </div>
+
+        </header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <ul class="footer-navigation">
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./catalog.html">Catalog</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html"><i class="fa fa-paper-plane"></i>Contact</a></li>
+                        </ul>
+                        <ul class="accepted-payments">
+                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-paypal"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-stripe"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                        </ul>
+                        <div class="copyright">
+                            <p>Copyright © 2015 Chair. Created by Designifyer.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/isotope.min.js"></script>
+        <script type="text/javascript" src="js/stellar.min.js"></script>
+        <script type="text/javascript" src="js/sidr.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </form>
+</body>
+</html>

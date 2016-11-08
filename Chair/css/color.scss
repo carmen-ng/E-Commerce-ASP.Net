@@ -1,0 +1,242 @@
+// _color.scss
+
+
+//Replace with your own hex code
+$primary-color: #e74c3c;
+
+
+p a, 
+.accent-color{
+  color: $primary-color;
+}
+
+a {
+	color: $primary-color;
+	
+	&:hover,
+	&:focus {
+		color: $primary-color;
+		text-decoration: none;
+		opacity:.7;
+	}
+}
+
+.navbar-default {
+	.navbar-nav {
+		li {
+			a {
+				&:hover,
+				&:focus {
+					color: $primary-color;
+					opacity: .8;
+				}
+			}
+
+			a.menu-cart {
+				color: $primary-color;
+
+				&:hover,
+				&:focus {
+					color: $primary-color;
+					opacity: .8;
+				}
+			}
+		}
+
+		.active {
+			a {
+				color: $primary-color;
+				
+				&:hover,
+				&:focus {
+					background: none;
+					color: $primary-color;
+					opacity: .8;
+				}
+			}
+		}
+	}
+
+	.navbar-toggle {
+		&:hover,
+		&:focus {
+			.icon-bar {
+				background: $primary-color;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		background: #F5F5F7;
+	}
+}
+
+.navbar {
+	.open {
+		a {
+			color: $primary-color;
+			&:hover,
+			&:focus,
+			&:active {
+				color: $primary-color!important;
+			}
+		}
+	}
+}
+
+.accent-bg {
+	background-color: $primary-color;
+}
+
+.btn-default,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	background-color: $primary-color;
+	
+	&:hover,
+	&:focus, 
+	&:active,
+	&:active:hover,
+	&:active:visited {
+		background-color: $primary-color;
+		opacity: .8;
+		color: #fff;
+	}
+}
+
+.btn-default,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	color: #fff;
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:visited {
+		color: #fff;
+		box-shadow: none;
+	}
+}
+
+.btn.btn-primary {
+	background: none;
+	color: $primary-color;
+	border-color: $primary-color;
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:visited {
+		opacity: .8;
+		background-color: transparent;
+		border-color:  $primary-color;
+		color: $primary-color;
+		box-shadow: none;
+	}
+}
+
+.action-bar {
+	a {
+		&:hover,
+		&:focus {
+			background-color: $primary-color;
+			color: #fff;
+
+			span {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.overlay.accent {
+
+	&:before {
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0px;
+	    content: '';
+	    opacity: 0.9;
+	    z-index: 2;
+		background-color: $primary-color;
+	}
+
+}
+
+.accent-bg {
+	color: #fff;
+
+	p, h2 {
+		color: #fff;
+	}
+
+	.btn.btn-primary {
+		border-color: #fff;
+		color: #fff;
+	}
+
+	.btn.btn-default {
+		background: #fff;
+		color: $primary-color;
+	}
+}
+
+section.products-grid {
+    .product {
+
+        .product-details {
+        	&:before {
+        		background: $primary-color;
+        	}
+        }
+    }
+}
+
+.thumbnail.with-info {
+
+	.info {
+		background: $primary-color;
+	}
+}
+
+a {
+	&:hover,
+	&:focus {
+		.custom-icon {
+			span {
+				border-color: $primary-color!important;
+			}
+		}
+	}
+}
+
+.map-wrapper {
+	.directions {
+		background-color: $primary-color;
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			opacity: .8;
+		}
+	}
+}
+
+.product-full-width {
+	.product {
+		.thumbnail {
+			.product-details {
+				background: $primary-color;
+			}
+		}
+	}
+}
+
+.error {
+	h1 {
+		color: $primary-color;
+	}
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chair. Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- styles -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/bootstrap-doc.css" rel="stylesheet">
+        <link href="css/google-code-prettify/prettify.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        
+    </head>
+
+    <body>
+        <header id="top">
+            <!--navbar -->
+            <div class="navbar navbar-inverse">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="index.html">Chair. - Documentation</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li><a href="http://designifyer.com/?rel=docs" target="_blank">Contact</a></li>
+                                <li><a href="mailto:support@designifyer.com">Support</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div><!--/.navbar -->
+        </header>
+        
+        
+        <article class="container">
+            <div class="row-fluid">
+                <div class="span3">
+                    <!--sidebar -->
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#get-started">Get Started</a></li>
+                        <li><a href="#file-structure">File Structure</a></li>
+                        <li><a href="#grid-system">Grid System</a></li>
+                        <li><a href="#parallax">Parallax</a></li>
+                        <li><a href="#lightbox">Lightbox</a></li>
+                        <li><a href="#icons">Icons</a></li>
+                        <li><a href="#slider">Slider</a></li>
+                        <li><a href="#map">Map</a></li>
+                        <li><a href="#color-scheme">Color Scheme</a></li>
+                        <li><a href="#changelog">Changelog</a></li>
+                    </ul><!--/.sidebar -->
+                </div><!--/.span3 -->
+
+                <div class="span9">
+                    <div class="doc-content-box">
+                        <!-- Class Overview -->
+                        <div class="page-header">
+                            <h2 id="get-started">GETTING STARTED</h2>
+                        </div>
+                        
+                        <p>Hello and thank you for purchasing Chair. html Store Template, made by <a href="http://designifyer.com/?rel=docs" target="_blank">Designifyer.com</a>. This documentation will give you an understanding of how the files are structured and guide you in performing common functions. If you require further assistance not covered in this documentation, please contact us via <a href="mailto:support@designifyer.com">support@designifyer.com</a>.</p>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Contact Information</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p class="class-scope">Author</p></td>
+                                    <td>
+                                        <a href="http://designifyer.com/?rel=docs" class="class-name" target="_blank">Designifyer.com</a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p class="class-scope">Contact</p></td>
+                                    <td>
+                                        <a href="mailto:support@designifyer.com" class="class-name" target="_blank">support@designifyer.com</a> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p class="class-scope">Item</p></td>
+                                    <td>
+                                        <p>Chair. - Html store template</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="file-structure">File Structure</h3>
+                            </div>
+                                
+                            <p>The template contains 16 html files. You will find them in the root directory of the download package.</p>
+                            <h4>Css</h4>
+                            <p>The template comes with a number of CSS files, many of which you will likely never touch. There are 2 files that you will most likely edit since you are going to apply some degree of customization to your site.</p>
+                            <h5>style.css</h5>
+                            <p>This is the main stylesheet for the template and includes all styles relating to the appearance of the elements you see inside each page. This stylesheets has been commented for ease of use and all style rules are grouped under particular headings such as /* Typography */</p>
+                            <h5>color-red.css</h5>
+                            <p>This is the main color scheme for Chair. Template. However if you would prefer a diffrent one you will need to include the appropriate CSS file in the head of your document. For example, if you wanted to use the 'Cyan' colour scheme you would include the following:</p>
+                            <pre class="prettyprint linenums">&lt;link href=&quot;css/color-cyan.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot;/&gt;</pre>
+                            <h5>Creating your own colour scheme with SASS</h5>
+                            <p>As Chair. comes with scss file for color scheme, you can easily change the colour scheme in color.less The colour variable is as follows:</p>
+                            <pre class="prettyprint linenums">$primary-color</pre>   
+                            <p>Edit this value inside the color.scss file and compile to generate your own colour scheme then include it in your html documents as showen above</p>
+
+                            <h4>Javascript Files</h4>
+                            <p>Chair. comes with a number of JS files, many of which you will never edit. If you don't know your way around javascript please don't edit them, these files will break parts of your site.</p>
+                            <h5>scripts.js</h5>
+                            <p>This is the main scripts file for the template, that includes all functions specific to the theme such as control of the slider and parallax declarations among other things. You will see that the file is structured as</p>
+                           <pre class="prettyprint linenums">$(document).ready(function(){});</pre>
+                           <p>followed by some other helper functions.</p>
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="grid-system">Grid System</h3>
+                            </div>
+                            
+                            <p>The template is based on Bootstrap v3.3.5, 12 column grid system. Is flexible and easy to understand. For more info go <a href="http://getbootstrap.com/css/#grid" target="_blank">here</a>.</p>
+
+                            <h4>Basic Introduction</h4>
+                            <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+
+                            <p>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</p>
+                            <p>Use rows to create horizontal groups of columns.</p>
+                            <p>Content should be placed within columns, and only columns may be immediate children of rows.</p>
+                            <p>Predefined grid classes like <code>.row</code> and <code>.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</p>
+                            <p>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.rows</code>.</p>
+                            <p>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</p>
+                            <p>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .<code>col-xs-4</code>.</p>
+                            <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+                            <p>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, applying any <code>.col-md-</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code>.col-lg-</code> class is not present.</p>
+
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="parallax">Parallax</h3>
+                            </div>
+                            <p>This effect is disabled for touch devices to improve performance.</p>
+                            <p>Enabling the parallax effect requires you to add the class '.parallax-background' to the '.background-image-holder' element like so:</p>
+
+                            <pre class="prettyprint linenums">&lt;section&gt; 
+    &lt;div class=&quot;background-image-holder parallax-background&quot;&gt; 
+        &lt;img alt=&quot;Background Image&quot; class=&quot;background-image&quot; src=&quot;images/image.jpg&quot; /&gt; 
+    &lt;/div&gt; 
+&lt;/section&gt;</pre>   
+
+                        </div>
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="lightbox">Lightbox</h3>
+                            </div>
+                            <p>Chair. Template makes use of the lightbox gallery javascript plugin and is simple to setup on any image element by observing the following conventions. The image must be wrapped in an 'a' tag and contain a href that points to the large image (the one you want to show when the user clicks on the thumbnail). Inside the 'a' you need an 'img' element whose 'src' value points to the thumbnail image. </p>
+
+                            <pre class="prettyprint linenums">
+&lt;a href=&quot;images/large-image.jpg&quot; class=&quot;lightbox&quot;&gt; 
+    &lt;img src=&quot;images/thumbnail.jpg&quot; alt=&quot;&quot;&gt; 
+&lt;/a&gt;</pre>   
+
+                            <p>Also you need to call the script for lightbox in that page, if it's not already there place the following line after footer and before body tag ends:</p>
+                            <pre class="prettyprint linenums">&lt;script src=&quot;js/popup.min.js&quot;&gt;&lt;/script&gt;</pre> 
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="icons">Icons</h3>
+                            </div>
+
+                            <p>Chair. makes use of two awesome icon packs. The first one is <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a> and the second <a href="http://linea.io/" target="_blank">Linea</a>.Using these icon packs is a simple matter of knowing the correct class to use.</p>
+
+                            <h4>Font Icon Usage:</h4>
+                            <code>&lt;i class=&quot;fa fa-NAME&quot;&gt;&lt;/i&gt;</code>
+                            Example: <code>&lt;i class=&quot;fa fa-paper-plane&quot;&gt;&lt;/i&gt;</code>
+
+                            <h4>Linea Font usage:</h4>
+                            <code>&lt;span data-icon="v" class="icon"&gt;&lt;/span&gt;</code>
+                            
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="slider">Slider</h3>
+                            </div>
+
+                            <p>Chair. uses Slick Slider plugin as its primary slider manager. You can view all available options for the plugin at <a href="http://kenwheeler.github.io/slick/" target="_blank">their website</a></p>
+
+                            <p>The basic structure implemented in Chair. Template is as follows:</p>
+                            
+                            <pre class="prettyprint linenums">
+&lt;header class="fullscreen-element"&gt;
+    &lt;div class="hero-slider"&gt;
+        &lt;div class="slide" style="background: url('images/image.jpg') 50% 0%;"&gt;
+            ...YOUR CONTENT HERE...
+        &lt;/div&gt;
+        &lt;div class="slide" style="background: url('images/image.jpg') 50% 0%;"&gt;
+            ...YOUR CONTENT HERE...
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</pre>
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="map">Map</h3>
+                            </div>
+
+                            <p>Chair. uses Google maps plugin. If you want to add a map to any page you have to first call the Google maps API after the footer and before the ending body tag like this:</p>
+
+                            <pre class="prettyprint linenums">&lt;script src="https://maps.googleapis.com/maps/api/js?v=3.exp"&gt;&lt;/script&gt;</pre>
+                            <p> Then add a div with the id <code>#map</code>, <code>data-lat=""</code> for latitude and <code>data-long=""</code> for longitude. Like this:</p>
+                            <pre class="prettyprint linenums">&lt;div id="map" data-lat="40.7033127" data-long="-73.979681"&gt;&lt;/div&gt;</pre>
+                        </div>
+
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="color-scheme">Color Scheme</h3>
+                            </div>
+
+                            <p>Chair. comes with 12 different colour schemes. The red one is defaut but if you would prefer a diffrent one you will need to include the appropriate CSS file in the head of your document. For example, if you wanted to use the 'Cyan' colour scheme you would include the following:</p>
+
+                            <pre class="prettyprint linenums">&lt;link href=&quot;css/color-cyan.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot;/&gt;</pre>
+                            <h5>Creating your own colour scheme with SASS</h5>
+                            <p>As Chair. comes with scss file for color scheme, you can easily change the colour scheme in color.less The colour variable is as follows:</p>
+                            <pre class="prettyprint linenums">$primary-color</pre>   
+                            <p>Edit this value inside the color.scss file and compile to generate your own colour scheme then include it in your html documents as showen above.</p>
+
+                        </div>
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="changelog">Changelog</h3>
+                            </div>
+
+                            <p>Version 1.1</p>
+                                <ul>
+                                    <li>Replace: Replaced the parallax plugin because it was causing the scrolling error on mobile and page height.</li>
+                                    <li>Fix: Fixed scrolling problem on mobile</li>
+                                </ul>
+                            <p>Version 1.0: Initial release</p>
+
+                        </div>
+
+                        <div class="detail-box">
+                            <div class="page-header">
+                                <a title="jump to class summary" href="#top" class="scroll pull-right">
+                                    <span class="label label-info"><i class="icon-white icon-arrow-up"></i></span> 
+                                </a>
+                                <h3 id="Update">How to update from 1.0 to 1.1</h3>
+                            </div>
+
+                            <p>In version 1.1 <strong>we replaced skrollr.js</strong> prallax plugin with <strong>stellar.js</strong>. Skrollr was causing an error on mobile devices and we couldn't scroll down the page. We tried to fix that but then it caused another error, the page height was not acurate and it caused a hudge blank space at the bottom of each page that was using parallax. So we decided to move to a better solution: stellar.js.</p>
+
+                            <p>If you download the package on TF now the site works just fine without any errors, however if you want to update the old version please do the folowing (please contact us throught our <a href="http://themeforest.net/user/catalinmoraru#contact" target="_blank">profile page</a> if you can't do it and we can do it for you):</p>
+
+                            <p>1. Download the package from Themeforest downloads page</p>
+                            <p>2. Extract the package and inside you will find Chair  folder. Open it and inside look for <strong>js</strong> folder. Inside the js folder search for <strong>stellar.min.js</strong> and copy it to your js folder on the old version.</p>
+                            <p>3. On the old version open <strong>js</strong> folder, <strong>find and delete skrollr.min.js</strong>.</p>
+
+                            <p>4. Replace </p>
+                            <pre class="prettyprint linenums">&lt;script type=&quot;text/javascript&quot; src=&quot;js/skrollr.min.js&quot;&gt;&lt;/script&gt;</pre>
+                            <p>with:</p>
+                            <pre class="prettyprint linenums">&lt;script type=&quot;text/javascript&quot; src=&quot;js/stellar.min.js&quot;&gt;&lt;/script&gt;</pre>
+                            <p>on all HTML documents (should be at the very bottom of the page)</p>
+
+                            <p>5.In the <strong>js/scripts.js</strong> on line 40 - 43 you will find and delete:</p>
+                            <pre class="prettyprint linenums">
+skrollr.init({
+    forceHeight: false
+});
+                            </pre>
+
+                            <p>Instead place this code:</p>
+                            <pre class="prettyprint linenums">
+$.stellar({
+    horizontalScrolling: false,
+    verticalScrolling: true,
+    horizontalOffset: 0,
+    verticalOffset: 0,
+    responsive: true,
+    parallaxBackgrounds: true
+});
+                            </pre>
+
+                            <p>6. Add <pre>data-stellar-background-ratio="0.9"</pre> to every background you want to use parallax on html like:</p>
+                            <pre class="prettyprint linenums">
+&lt;div class=&quot;background-image-holder parallax-background overlay&quot; data-stellar-background-ratio=&quot;0.9&quot;&gt; 
+    &lt;img class=&quot;background-image&quot; alt=&quot;Background Image&quot; src=&quot;images/1600x900.png&quot;&gt; 
+&lt;/div&gt;
+                            </pre>
+
+                            <p>You have to do this for every element that has a class of <strong>parallax-background</strong></p>
+
+                        </div>
+                        
+                    </div>
+                </div><!--/.span9 -->
+            </div><!--/.row-fluid -->
+        </article>
+        
+        
+        <!-- footer -->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <p>Made by <a href="http://designifyer.com/?rel=docs" target="_blank">Designifyer.com</p>
+                </div>
+            </div>
+        </footer><!--/.footer -->
+        
+        
+        <!-- javascript
+        ================================================== -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/google-code-prettify/prettify.js"></script>
+        
+        <script type="text/javascript">
+            jQuery(document).ready(function($){
+                
+                // make code pretty demo
+                window.prettyPrint && prettyPrint();
+
+                
+                $(".scroll, .nav-tabs.nav-stacked > li > a").click(function(event){
+                    event.preventDefault();
+                    $("html,body").animate({scrollTop: $(this.hash).offset().top-50}, 'slow');
+                });
+                
+            });
+
+        </script>
+    </body>
+</html>
